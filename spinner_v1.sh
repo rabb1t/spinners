@@ -17,11 +17,11 @@ dots_a="........"
 dots_b=""
 dots_count="${#dots_a}"
 limit=$[dots_count*2]
+dot="${dots_a:0:1}"
 
 printSpinner()
 {   
     local repeat="$( printf "%.0f\n" `echo "1 / $SPIN_DELAY" | bc -ql` )"
-    local dot="${dots_a:0:1}"
 
     if which bc &>/dev/null; then
 	while [ "$repeat" -gt 0 ]; do
