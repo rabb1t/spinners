@@ -54,7 +54,7 @@ printSpinner()
 	done
     else
 	# Use sleep(1) if `bc' doesn't installed
-        sleep $SPIN_DELAY
+        sleep 1
     fi
 }
 
