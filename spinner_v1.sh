@@ -21,7 +21,7 @@ dot="${dots_a:0:1}"
 
 printSpinner()
 {   
-    local repeat="$( printf "%.0f\n" `echo "1 / $SPIN_DELAY" | bc -ql` )"
+    local repeat="$( LC_ALL=C LC_NUMERIC=C printf "%.0f\n" `echo "1 / $SPIN_DELAY" | bc -ql` )"
 
     if which bc &>/dev/null; then
 	while [ "$repeat" -gt 0 ]; do
