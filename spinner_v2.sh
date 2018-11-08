@@ -20,7 +20,7 @@ while [ $width -ge 0 ]; do
 	sleep $speed
 	let width--
 	perc="$(echo "${perc}+${inc}" | bc -ql)"
-	perc="$(printf "%.3f" $perc)"
+
 	if [ ${perc%%.*} -lt 10 ]; then
 		printf "\b\b\b"
 	else
